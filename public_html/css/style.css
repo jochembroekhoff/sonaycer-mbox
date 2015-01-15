@@ -1,0 +1,40 @@
+/*
+    CSS Stylesheet for Sonaycer
+*/
+
+/*  IMPORT */
+@import url(loading.css);
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat-x;
+    margin-top: 75px
+}
+.nav.nav-pills li.header {
+    font-variant: small-caps;
+    border-bottom: 1px #c0c0c0 solid;
+    margin-bottom: 5px;
+    margin-top: 20px
+}
+
+.hidden {
+    display: none
+}
+
+.no-height {
+    height: 0px !important
+}
+
+/*# SONAYCER-START */
+#sonaycer-start-container {
+    margin-top:200px
+}
+
+/*# SONAYCER-MAIN */
+/* nothing currently*/
+
+@media screen and (max-width: 768px) {
+    #sonaycer-start-container {
+        margin-top: 100px !important
+    }
+}

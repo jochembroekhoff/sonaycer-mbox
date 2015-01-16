@@ -1,7 +1,7 @@
 #Welcome,
 This is the source code of __Sonaycer MBox__
 
-__Note__ _that this __README.md__ is not ready yet._
+__Note__ _that this_ __README.md__ _is not ready yet._
 
 Sonaycer MBox is _the_ internal mail and notification system!
 

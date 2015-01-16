@@ -9,6 +9,9 @@
  * @return string
  */
 function out($data, $echo = true) {
-    echo json_encode($data);
+    if ($echo) {
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
     return json_encode($data);
 }

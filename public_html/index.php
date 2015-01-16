@@ -59,7 +59,7 @@ switch ($_REQUEST['action']) {
             <div class="row well">
                 <div class="col-md-3">
                     <button class="btn btn-primary btn-block" id="sonaycer-compose-button">
-                        <i class="fa fa-plus"></i> New draft
+                        <i class="fa fa-plus"></i> New message
                     </button>
                     <ul class="nav nav-pills nav-stacked">
                         <li class="header">Folders</li>

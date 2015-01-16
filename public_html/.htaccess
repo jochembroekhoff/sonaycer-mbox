@@ -3,7 +3,8 @@ RewriteEngine On
 RewriteRule ^index index.php [NC]
 RewriteRule ^compose compose.php [NC]
 RewriteRule ^folder/([a-zA-Z0-9]+) viewfolder\.php?folderid=$1 [NC]
-RewriteRule ^ajax/([a-zA-Z0-9]+) ajax/$1\.php [NC,L]
+RewriteRule ^ajax/([a-zA-Z0-9]+) ajax/$1\.php [NC]
+RewriteRule ^auth auth\.php [NC,L]
 
 #For parsing .css files as PHP
 AddHandler application/x-httpd-php .css

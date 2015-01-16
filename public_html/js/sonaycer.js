@@ -16,6 +16,9 @@ function preInit() {
     stopwatch.start();
     $('.loading').append('<div class="bullet"></div><div class="bullet"></div><div class="bullet"></div><div class="bullet"></div>');
     
+    $('#sonaycer-start-text').text('Checking your state...');
+    actions.updateUser();
+    
     switch(startAction) {
         case 'compose':
             $('#sonaycer-start-text').text('A new draft is prepairing...');
@@ -34,8 +37,6 @@ function preInit() {
 }
 function init() {
     navigator.registerProtocolHandler("mailto",basis.url + '/compose?mailto_data=%s',"Sonaycer MBox");
-    
-    actions.updateUser();
     
     switch(startAction) {
         case 'compose':
@@ -129,7 +130,7 @@ var actions = {
         })
         .done(function(data) {
             if (data.signedIn) {
-                actions.setToken;
+                actions.setToken(data.token);
                 return true;
             } else {
                 window.location = basis.url + '/auth?return=' + basis64_encode(basis.current);

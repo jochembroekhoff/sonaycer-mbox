@@ -20,6 +20,10 @@ class Language{
      */
     private $config;
     
+    /**
+     * Construct this class.
+     * @param array $config Array with configuration
+     */
     function __construct($config) {
         $this->current_lang_code = $config['default'];
         $this->config = $config;

@@ -12,7 +12,7 @@ class Config{
     private $file;
     private $parsed_ini_file;
     
-    function __construct(){
+    function __construct() {
         $this->file = dirname(__FILE__).'/../Sonaycer.ini';
         $this->parsed_ini_file = parse_ini_file($this->file, true);
     }
@@ -22,10 +22,22 @@ class Config{
      * @param sting $key Key of the Section
      * @return string
      */
-    function getItem($section='', $key=''){
+    function getItem($section='', $key='') {
         if(!empty($section) and !empty($key)){
             return $this->parsed_ini_file[$section][$key];
-        }else{
+        } else {
+            return '';
+        }
+    }
+    /**
+     * Get a whole configuration section.
+     * @param string $section Sectoion of Sonaycer.ini
+     * @return array
+     */
+    function getSection($section='') {
+        if(!empty($section)) {
+            return $this->parsed_ini_file[$section];
+        } else {
             return '';
         }
     }

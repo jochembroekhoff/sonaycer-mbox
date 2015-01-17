@@ -3,6 +3,9 @@
  * Sonaycer basis AJAX functions
  */
 
+//inculde _base.php for the SONAYCER_BASE constant.
+include_once dirname(__FILE__).'/../_base.php';
+
 /**
  * Echo a JSON string (from array)
  * @param array $data
